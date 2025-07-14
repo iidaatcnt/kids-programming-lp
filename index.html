@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>小学生向けオンラインプログラミング教室</title>
     <link rel="stylesheet" href="./style.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
     <header>
@@ -23,13 +25,39 @@
         </div>
     </header>
 
-    <section id="hero" class="hero">
-        <div class="container">
-            <h2>未来を創る力を育む！小学生向けオンラインプログラミング教室</h2>
-            <p>自宅で楽しく、論理的思考力と創造性を身につけよう！</p>
-            <a href="#contact" class="btn">無料体験レッスンに申し込む</a>
+    <!-- Swiper Hero Section -->
+    <section id="hero" class="hero swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide slide-1">
+                <div class="container">
+                    <h2>未来を創る力を育む！<br>小学生向けオンラインプログラミング教室</h2>
+                    <p>自宅で楽しく、論理的思考力と創造性を身につけよう！</p>
+                    <a href="#contact" class="btn">無料体験レッスンに申し込む</a>
+                </div>
+            </div>
+            <div class="swiper-slide slide-2">
+                <div class="container">
+                    <h2>ゲームで学ぶ！<br>プログラミングの楽しさを体験</h2>
+                    <p>ScratchやMinecraftで、遊びながら自然とスキルアップ！</p>
+                    <a href="#contact" class="btn">無料体験レッスンに申し込む</a>
+                </div>
+            </div>
+            <div class="swiper-slide slide-3">
+                <div class="container">
+                    <h2>少人数制で安心！<br>一人ひとりに寄り添う丁寧な指導</h2>
+                    <p>経験豊富な講師が、お子様の「なぜ？」を大切に育みます。</p>
+                    <a href="#contact" class="btn">無料体験レッスンに申し込む</a>
+                </div>
+            </div>
         </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
     </section>
+
 
     <section id="about" class="about">
         <div class="container">
@@ -161,5 +189,24 @@
     </footer>
 
     <script src="./script.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
 </html>
